@@ -38,13 +38,14 @@ const updateValue = (e) => {
     <p class="uppercase text-xs font-semibold" :data-cy="dataCyTitle">
       {{ title }}
     </p>
-    <input
-      :type="type"
-      :placeholder="placeholder"
-      @input="updateValue"
-      :value="modelValue"
-      class="border border-[#E5E5E5] rounded-md px-[18px] py-[14px] placeholder:text-[#A4A4A4] focus:outline-primary caret-primary"
-      :data-cy="dataCyInput"
-    />
+    <div :data-cy="dataCyInput" class="w-full">
+      <input
+        :type="type"
+        :placeholder="placeholder"
+        @input="updateValue"
+        :value="modelValue"
+        class="border border-[#E5E5E5] rounded-md px-[18px] py-[14px] placeholder:text-[#A4A4A4] focus:outline-primary caret-primary w-full"
+      />
+    </div>
   </div>
 </template>

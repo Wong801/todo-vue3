@@ -40,7 +40,7 @@ onMounted(async () => {
       data-cy="activity-header"
       class="flex justify-between items-center mt-[49px] mb-[59px]"
     >
-      <h1 class="font-bold text-4xl leading-[54px]">Activity</h1>
+      <h1 data-cy="activity-title" class="font-bold text-4xl leading-[54px]">Activity</h1>
       <c-button
         @click="createNewActivity"
         data-cy="activity-add-button"
@@ -60,11 +60,11 @@ onMounted(async () => {
     </div>
     <div v-else class="grid grid-cols-4 gap-x-5 gap-y-[26px]">
       <activity-card
-        v-for="(activity, index) in activities"
+        v-for="activity in activities"
         :key="activity.id"
         @enter="enterDetail(activity.id)"
         @delete="deleteActivity(activity.id)"
-        :data-cy="`activity-item-${index}`"
+        :data-cy="`activity-item`"
       >
         {{ activity.title }}
         <template #date>

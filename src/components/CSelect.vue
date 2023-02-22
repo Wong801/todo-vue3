@@ -104,7 +104,7 @@ watch(
         data-cy="modal-add-priority-item"
       >
         <div v-html="showMenu ? placeholder : currentItem.label"></div>
-        <button>{{ showMenu ? "&#9652;" : "&#9662;" }}</button>
+        <button data-cy="modal-add-priority-dropdown">{{ showMenu ? "&#9652;" : "&#9662;" }}</button>
       </div>
       <div v-show="showMenu" class="absolute w-[205px] bg-white">
         <div

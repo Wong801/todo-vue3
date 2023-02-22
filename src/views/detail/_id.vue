@@ -130,7 +130,7 @@ watch(
         >
           <img src="@/assets/todo-back-button.svg" alt="todo-back-button" />
         </button>
-        <h1 v-if="!isTitleEdit" class="font-bold text-4xl leading-[54px]">
+        <h1 v-if="!isTitleEdit" data-cy="todo-title" class="font-bold text-4xl leading-[54px]">
           {{ activity.title }}
         </h1>
         <input
